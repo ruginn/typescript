@@ -29,12 +29,38 @@ const thisFunction = (num: number, str: string, tf: boolean) => {
 // It will complain if all the arguments are not there
 thisFunction(43, 'fd', true)
 
-// functions with default values, will go after defining
+// functions with default values, will go after defining, type script infer what it will return 
 const greet = (person: string|number = 'stranger'): string | number => {
     console.log(person)
     return `hello ${person}`
 }
+
 greet()
 greet('jeff')
-// 
+//
+
+const cubed = (num: number): number | string => {
+    console.log(num * num * num)
+    return num * num * num
+}
+
+cubed(2)
+
+// typescript will infer what the return type is within a fucntion and map type methods 
+const colors = ['red', 'yellow', 'blue']
+const colorsList = colors.map(color => {
+    return color.toUpperCase()
+})
+
+// void is when returning nothing from a function 
+const printer = (): void => {
+    console.log('this is the print') 
+}
+
+// never type is used to when the return should never happen, it either will loop forever or never return anything
+const thisCat = (): never => {
+    while (true){
+        console.log('never return')  
+    }
+}
 
