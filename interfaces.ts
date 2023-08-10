@@ -1,4 +1,5 @@
-// kinda like alias, but only objects, we can add things to the interface thats what makes it different
+// kinda like alias, but only objects, we can add things to the interface thats what makes it different, 
+// key difference only object for interface, can reopen and add more, and extends
 interface Person {
     name: string, 
     age: number
