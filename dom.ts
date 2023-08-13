@@ -1,4 +1,4 @@
-const button = document.getElementById('presser') as HTMLElement
+const button = document.getElementById('presser')!
 
 button?.addEventListener('click', function() {
     alert('hello')
